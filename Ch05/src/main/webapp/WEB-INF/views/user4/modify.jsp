@@ -11,25 +11,26 @@
 	<a href="/Ch05/user4/list">user4 목록</a>
 	
 	<form action="/Ch05/user4/register" method="post">
+	<input type="hidden" name="seq" value="${user.seq}">
 		<table border="1">
 			<tr>
 				<td>이름</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="name" value="${user.name}"></td>
 			</tr>
 			<tr>
 				<td>성별</td>
 				<td>
-					<label><input type="radio" name="gender" value="1">남</label>
-					<label><input type="radio" name="gender" value="2">여</label>
+					<label><input type="radio" name="gender" value="1" ${user.gender == 1 ? "checked": ""}>남</label>
+					<label><input type="radio" name="gender" value="2" ${user.gender == 2 ? "checked": ""}>여</label>
 				</td>
 			</tr>
 			<tr>
 				<td>나이</td>
-				<td><input type="number" name="age"></td>
+				<td><input type="number" name="age" value="${user.age}"></td>
 			</tr>
 			<tr>
 				<td>주소</td>
-				<td><input type="text" name="addr"></td>
+				<td><input type="text" name="addr" ${user.addr}></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="right"><input type="submit" value="수정"></td>
