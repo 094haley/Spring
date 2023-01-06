@@ -10,7 +10,7 @@
 	<a href="/Ch05">Ch05 메인</a>
 	<a href="/Ch05/user4/list">user4 목록</a>
 	
-	<form action="/Ch05/user4/register" method="post">
+	<form action="/Ch05/user4/modify" method="post">
 	<input type="hidden" name="seq" value="${user.seq}">
 		<table border="1">
 			<tr>
@@ -30,7 +30,7 @@
 			</tr>
 			<tr>
 				<td>주소</td>
-				<td><input type="text" name="addr" ${user.addr}></td>
+				<td><input type="text" name="addr" value="${user.addr}"></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="right"><input type="submit" value="수정"></td>
